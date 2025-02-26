@@ -1,0 +1,37 @@
+/* Reset default margins */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Centering the grid */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full height */
+    background-color: #f4f4f4;
+}
+
+/* Grid container */
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    width: 80vw;
+    max-width: 800px;
+}
+
+/* Grid items */
+.grid-item {
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+/* Make images responsive */
+.grid-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
