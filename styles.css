@@ -1,37 +1,52 @@
-/* Reset default margins */
+/* Reset margins and box sizing */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Centering the grid */
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh; /* Full height */
-    background-color: #f4f4f4;
+/* Prevent scrolling */
+body, html {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
 }
 
 /* Grid container */
 .image-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    width: 80vw;
-    max-width: 800px;
+    width: 100vw;
+    height: 100vh;
 }
 
-/* Grid items */
+/* Grid items (each cell) */
 .grid-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     overflow: hidden;
-    border-radius: 8px;
 }
 
-/* Make images responsive */
+/* Ensure images fully cover the grid cells */
 .grid-item img {
     width: 100%;
-    height: auto;
-    display: block;
+    height: 100%;
     object-fit: cover;
+    display: block;
 }
+
+/* Viewport size display box */
+#viewport-size {
+    position: fixed;
+    bottom: 10px; /* Adjust corner placement */
+    right: 10px;
+    background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    color: white;
+    padding: 8px 12px;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+    border-radius: 5px;
+    z-index: 1000; /* Ensure it's above everything */
+    pointer-events: none; /* Avoid interaction issues */
+}
+
