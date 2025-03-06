@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
     const grid = document.querySelector(".image-grid");
-    const imageFolder = "sun"; // Folder containing images
+    const imageFolder = "sun_images"; // Folder containing images
     const totalImages = 400; // Maximum number of images available
     let imageList = [];
 
