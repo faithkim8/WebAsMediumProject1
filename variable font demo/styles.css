@@ -1,0 +1,22 @@
+@font-face{
+	font-family: 'Kyiv Sans';
+	src: url('fonts/KyivTypeSans-VarGX.woff2');
+	font-weight: 0 1000;
+}
+
+h1{
+	height: 100vh;
+	display: grid;
+	place-content: center;
+	margin:0;
+	text-align: center;
+}
+
+.variable-font {
+	font-family: 'Kyiv Sans';
+	font-weight: 500;
+	line-height: 1.1;
+
+	font-weight: 1000;
+	font-variation-settings: 'CONT' 100, 'MIDL' 0;
+}
